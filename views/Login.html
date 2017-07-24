@@ -20,10 +20,10 @@
 	     	
 	     	 <ul class="nav navbar-nav navbar-right">
 		        <li style="margin:10px; ">
-		        	<input type="text" class="form-control" placeholder="Email">
+		        	<input type="email" class="form-control" placeholder="Email" ng-model="loginemail" required="true">
 		        </li>
 		        <li style="margin:10px; ">
-		        	<input type="Password" class="form-control" placeholder="Password">
+		        	<input type="Password" class="form-control" placeholder="Password" ng-model="loginpass" required="true">
 		        </li>
 		        <li style="margin:10px; ">
 		        	<button class="btn btn-info" ng-click='signin()'>Sign In</button>
@@ -42,7 +42,7 @@
 		<h3 class="text-center">Register Here</h3><hr>
 		<form>
 			<input type="text" class="form-control" placeholder="Name" ng-model='name' required><br>
-			<input type="text" class="form-control" placeholder="Email" ng-model='email' required><br>
+			<input type="email" class="form-control" placeholder="Email" ng-model='email' required><br>
 			<input type="Password" class="form-control" placeholder="Password" ng-model='password' required><br>
 			<input type="Password" class="form-control" placeholder="Password-Again" ng-model='password_again' required><br>
 			<button class="btn btn-info" ng-click='reg()'>Register</button><br>
