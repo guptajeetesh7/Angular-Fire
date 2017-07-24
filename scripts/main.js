@@ -34,6 +34,18 @@ app.controller('register',function($scope,$location,$firebaseAuth){
 
 					alert('Thank You for Registeration');
 
+					authObj.$onAuthStateChanged(function(user) {
+					  user.sendEmailVerification(); 
+
+					  if (user.emailVerified) {
+					    alert('Now log In with your Credentials');
+					  }
+					  else {
+					    alert('Please Verifiy your Email');
+					  }
+
+					});
+
 				}).catch(function(error) {
 				  // Handle Errors here.
 				  
