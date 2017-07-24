@@ -9,10 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="firebase.ico" >
 
-    <!--Material Desgin Lite-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-orange.min.css" />
-	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>	
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    	
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -22,87 +23,47 @@
 	<!--Angular Js Dependencies -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<!-- Scripts needed -->
+	<script type="text/javascript" src="scripts/main.js"></script>
 
 
 </head>
 
-<body>
+<body ng-app='firebook'>
 
-<!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span><img class="title-image" src="images/fire.png"></span>
-      <span class="mdl-layout-title">Fire Book</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only ">
-      	<a class="mdl-navigation__link" href="">Welcome</a>
-               
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer drawer">
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid" id="nav-contents">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span> 
+	      </button>
+	      <a class="navbar-brand" href="#">
+	      	<img src="images/fire.png" id="logo">
+	      </a>
+	      
+	    </div>
+	    <div class="collapse navbar-collapse" id="myNavbar">
+	      <ul class="nav navbar-nav">
+	        <li ><a href="#"><strong>FireBook</strong></a></li>
+	        
+	      </ul>
 
-    <span class="mdl-layout-title"><img src="images/fire.png" class="title-image" > Fire Book</span>
-    <nav class="mdl-navigation">
-      <div class="mdl-textfield mdl-js-textfield">
-		    <a class="mdl-navigation__link" href="">Login</a>
-	   </div>
-      
-    </nav>
-  </div>
-  <main class="mdl-layout__content">
-    <div class="page-content">
-    	<div id="portal">
-			  <div class="mdl-card mdl-shadow--2dp" >
-			    <div class="mdl-card__media"><img src="images/loginimg.jpg" width="330" height="157" border="0">
-			    </div>
-			    <div class="mdl-card__supporting-text">
-			      <h4><strong>Sign In</strong></h4>
-			    </div>
-			    <div class="mdl-card__supporting-text">
-			     
-			      <div class="mdl-textfield mdl-js-textfield">
-			        <input class="mdl-textfield__input" type="email" id="email">
-			        <label class="mdl-textfield__label" for="email">E-mail</label>
+			<form class="navbar-form navbar-right">
+			      <div class="form-group">
+			        <input type="text" class="form-control" placeholder="Email">
+			        <input type="text" class="form-control" placeholder="Password">
 			      </div>
+			      <button type="submit" class="btn btn-default">Submit</button>
+			    </form>
 
-			      <div class="mdl-textfield mdl-js-textfield">
-			        <input class="mdl-textfield__input" type="password" id="password">
-			        <label class="mdl-textfield__label" for="password">Password</label>
-			      </div>
+	    </div>
 
-			      <button id="login-button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored  mdl-js-ripple-effect">Sign In</button>
-			      <div id="login-progress" class="mdl-spinner mdl-js-spinner is-active"></div>
+	  
 
-			    </div>
-			  </div>
-			</div>
-
-    </div>
-  </main>
-
-<!-- Footer -->
-  <footer class="mdl-mini-footer foot ">
-  <div class="mdl-mini-footer__left-section">
-    <div class="mdl-logo">Fire Book</div>
-    <ul class="mdl-mini-footer__link-list">
-      <li><a href="#">Contribute</a></li>
-      <li><a href="#">&copy; Copyright Jeetesh Gupta 2017 </a></li>
-    </ul>
-  </div>
-</footer>
-
-</div>
-
-
-
-<!-- Scripts needed -->
-<script type="text/javascript" src="scripts/angular.js"></script>
-
+	  </div>
+	</nav>
 </body>
 
 </html>
