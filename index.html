@@ -4,7 +4,6 @@
 	
 	<title> Fire Book</title>
 
-
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="firebase.ico" >
@@ -20,76 +19,41 @@
 	<!--Google Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Fresca" rel="stylesheet">
 
+
 	<!--Angular Js Dependencies -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+
+	<!-- AngularFire -->
+	<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+	
 	<!-- Scripts needed -->
 	<script type="text/javascript" src="scripts/main.js"></script>
 
 
+
+
 </head>
 
-<body ng-app='firebook'>
-
-	<nav class="navbar navbar-default navbar-fixed-top">
-
-	  <div class="container-fluid" >
-	    <div class="navbar-header">
-
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span> 
-	      </button>
-	      
-	      <a class="navbar-brand" href="#" id="logo">
-	      	<span><img src='images/fire.png' style="width: 60px;height: 55px; margin-right: 10px; "></span>
-	      	<span style=" font-size: 30px;">FireBook</span>
-	      </a>
-	      
-	    </div>
-
-	    <div class="collapse navbar-collapse" id="myNavbar" >
-	     	
-	     	 <ul class="nav navbar-nav navbar-right">
-		        <li style="margin:10px; ">
-		        	<input type="text" class="form-control" placeholder="Email">
-		        </li>
-		        <li style="margin:10px; ">
-		        	<input type="Password" class="form-control" placeholder="Password">
-		        </li>
-		        <li style="margin:10px; ">
-		        	<button class="btn btn-info">Sign In</button>
-		        </li>
-		     </ul>
-
-	    </div>  
-
-	  </div>
-	</nav>
+<body ng-app='firebook' ng-view>
 
 
-	<div class="container" id="register">
-		
-		<img src="images/loginimg.jpg" id="loginimg" class="img-responsive img-rounded img-thumbnail">
-		<h3 class="text-center">Register Here</h3><hr>
-		<form>
-			<input type="text" class="form-control" placeholder="Name"><br>
-			<input type="text" class="form-control" placeholder="Email"><br>
-			<input type="Password" class="form-control" placeholder="Password"><br>
-			<input type="Password" class="form-control" placeholder="Password-Again"><br>
-			<button class="btn btn-info">Register</button><br>
-		</form>
-		<br>
-	</div>
-
-
-<footer >
-	<div class="container text-center">
-		<h3>Copyright &copy; Jeetesh Gupta 2017</h3>
-	</div>
-</footer>	
-
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA5enLKelb_L5HBQap1BaIy9MgDgvJpUuk",
+    authDomain: "firebook-f1cc1.firebaseapp.com",
+    databaseURL: "https://firebook-f1cc1.firebaseio.com",
+    projectId: "firebook-f1cc1",
+    storageBucket: "",
+    messagingSenderId: "961047994890"
+  };
+  firebase.initializeApp(config);
+</script>
 
 </body>
 

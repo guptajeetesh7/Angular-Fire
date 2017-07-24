@@ -1,27 +1,58 @@
-<div id="portal">
-			  <div class="mdl-card mdl-shadow--2dp" >
-			    <div class="mdl-card__media"><img src="images/loginimg.jpg" width="330" height="157" border="0">
-			    </div>
-			    <div class="mdl-card__supporting-text">
-			      <h4><strong>Sign In</strong></h4>
-			    </div>
-			    <div class="mdl-card__supporting-text">
-			     
-			      <div class="mdl-textfield mdl-js-textfield">
-			        <input class="mdl-textfield__input" type="email" id="email">
-			        <label class="mdl-textfield__label" for="email">E-mail</label>
-			      </div>
+<nav class="navbar navbar-default navbar-fixed-top" >
 
-			      <div class="mdl-textfield mdl-js-textfield">
-			        <input class="mdl-textfield__input" type="password" id="password">
-			        <label class="mdl-textfield__label" for="password">Password</label>
-			      </div>
+	  <div class="container-fluid" >
+	    <div class="navbar-header">
 
-			      <button id="login-button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored  mdl-js-ripple-effect">Sign In</button>
-            	<button id="register-button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored  mdl-js-ripple-effect">Register Now</button>
-            
-			      <div id="login-progress" class="mdl-spinner mdl-js-spinner is-active"></div>
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span> 
+	      </button>
+	      
+	      <a class="navbar-brand" href="#" id="logo">
+	      	<span><img src='images/fire.png' style="width: 60px;height: 55px; margin-right: 10px; "></span>
+	      	<span style=" font-size: 30px;">FireBook</span>
+	      </a>
+	      
+	    </div>
 
-			    </div>
-			  </div>
-			</div>
+	    <div class="collapse navbar-collapse" id="myNavbar" >
+	     	
+	     	 <ul class="nav navbar-nav navbar-right">
+		        <li style="margin:10px; ">
+		        	<input type="text" class="form-control" placeholder="Email">
+		        </li>
+		        <li style="margin:10px; ">
+		        	<input type="Password" class="form-control" placeholder="Password">
+		        </li>
+		        <li style="margin:10px; ">
+		        	<button class="btn btn-info" ng-click='signin()'>Sign In</button>
+		        </li>
+		     </ul>
+
+	    </div>  
+
+	  </div>
+	</nav>
+
+
+	<div class="container" id="register">
+		
+		<img src="images/loginimg.jpg" id="loginimg" class="img-responsive img-rounded img-thumbnail">
+		<h3 class="text-center">Register Here</h3><hr>
+		<form>
+			<input type="text" class="form-control" placeholder="Name" ng-model='name' required><br>
+			<input type="text" class="form-control" placeholder="Email" ng-model='email' required><br>
+			<input type="Password" class="form-control" placeholder="Password" ng-model='password' required><br>
+			<input type="Password" class="form-control" placeholder="Password-Again" ng-model='password_again' required><br>
+			<button class="btn btn-info" ng-click='reg()'>Register</button><br>
+		</form>
+		<br>
+	</div>
+
+
+<footer >
+	<div class="container text-center">
+		<h3>Copyright &copy; Jeetesh Gupta 2017</h3>
+	</div>
+</footer>	
