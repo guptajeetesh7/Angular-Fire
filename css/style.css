@@ -50,7 +50,7 @@
 
 
 #register{
-	 margin: 100px; width: 35%; margin-left: 30%;
+	 margin: 100px; width: 35%; margin-left: 32%;
 	box-shadow: 0px 0px 10px #888888;
 	box-sizing: border-box;
 }
@@ -58,4 +58,15 @@
 #loginimg{
 	width: 100%;
 	margin-top:1px; 
+}
+
+
+
+/* footer styles */
+footer{
+	background-color: #455A64;
+	color: white;
+	font-size: 30px;
+	min-height: 60px;
+
 }
