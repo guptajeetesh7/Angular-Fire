@@ -32,38 +32,48 @@
 <body ng-app='firebook'>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
-	  <div class="container-fluid" id="nav-contents">
+
+	  <div class="container-fluid" >
 	    <div class="navbar-header">
+
 	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span> 
 	      </button>
-	      <a class="navbar-brand" href="#">
-	      	<img src="images/fire.png" id="logo">
+	      
+	      <a class="navbar-brand" href="#" id="logo">
+	      	<span><img src='images/fire.png' style="width: 60px;height: 55px; margin-right: 10px; "></span>
+	      	<span style=" font-size: 30px;">FireBook</span>
 	      </a>
 	      
 	    </div>
-	    <div class="collapse navbar-collapse" id="myNavbar">
-	      <ul class="nav navbar-nav">
-	        <li ><a href="#"><strong>FireBook</strong></a></li>
-	        
-	      </ul>
 
-			<form class="navbar-form navbar-right">
-			      <div class="form-group">
-			        <input type="text" class="form-control" placeholder="Email">
-			        <input type="text" class="form-control" placeholder="Password">
-			      </div>
-			      <button type="submit" class="btn btn-default">Submit</button>
-			    </form>
+	    <div class="collapse navbar-collapse" id="myNavbar" >
+	     	
+	     	 <ul class="nav navbar-nav navbar-right">
+		        <li style="margin:10px; ">
+		        	<input type="text" class="form-control" placeholder="Email">
+		        </li>
+		        <li style="margin:10px; ">
+		        	<input type="Password" class="form-control" placeholder="Password">
+		        </li>
+		        <li style="margin:10px; ">
+		        	<button class="btn btn-info">Sign In</button>
+		        </li>
+		     </ul>
 
-	    </div>
-
-	  
+	    </div>  
 
 	  </div>
 	</nav>
+
+
+	<div class="container" style="border: 1px solid black; margin: 100px; width: 35%; margin-left: 30%;">
+		Hello
+	</div>
+
+
 </body>
 
 </html>
