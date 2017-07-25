@@ -1,23 +1,7 @@
-var app = angular.module('firebook',['ngRoute','firebase']);
-
-//Angular Routing
-app.config(function($routeProvider,$locationProvider){
-
-	$routeProvider.when('/',{
-		templateUrl : 'views/Login.html',
-		controller: 'register'
-	});
-
-
-	  // enable html5Mode for pushstate ('#'-less URLs)
-
-    
-
-});
 
 
 
-app.controller('register',function($scope,$location,$firebaseAuth,$route){
+angular.module('firebook').controller('register',function($scope,$location,$firebaseAuth,$route,$location){
 
 	var ref = firebase.auth();  
     var authObj = $firebaseAuth(ref);
@@ -76,7 +60,13 @@ app.controller('register',function($scope,$location,$firebaseAuth,$route){
 		if($scope.loginemail!=null && $scope.loginpass!=null){
 
 			authObj.$signInWithEmailAndPassword($scope.loginemail,$scope.loginpass).then(function(){
+
 				alert('Welcome !!');
+				$rootScope.loggedIn=true;	
+				$location.path('/dashboard');
+				
+
+
 			}).catch(function(error){
 				alert(error.message);
 			});
